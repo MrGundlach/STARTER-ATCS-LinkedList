@@ -40,7 +40,7 @@ int main() {
     // add nodes to the list at the head (like a stack)
     for (int i = 1; i < 5; i++) {
         node *newnode = new node;
-        newnode -> data = rand() % 10 + 1;
+        newnode -> data = randInt(1, 10);
         newnode -> next = list;
         list = newnode;
     }
@@ -70,9 +70,10 @@ int main() {
     cout << "\nExample of a 'List' ADS (Sorted)" << endl;
     cout << "-------------------------------------" << endl;
     // add nodes to the list in a sorted manner
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 9; i++) {
         node *newNode = new node;
-        newNode -> data = rand() % 10 + 1;
+        
+        newNode -> data = randInt(1,100);
         insertSorted(newNode, sortedList);        
     }
 
